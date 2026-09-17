@@ -1,0 +1,32 @@
+{
+  "intro": "The Department of Economics at IE University is growing. This academic year we are recruiting three tenure-track faculty members in macroeconomics, monetary economics and time-series econometrics, to join the IE Economics Research Group in September 2027.",
+  "positions": [
+    {
+      "title": "Tenure-Track Faculty Positions in Economics 2026-2027",
+      "facts": [
+        ["Rank", "Assistant or Associate Professor (tenure track)"],
+        ["Fields", "Macroeconomics, Monetary Economics, Time-series Econometrics"],
+        ["Start date", "September 1, 2027"],
+        ["Location", "IE School of Politics, Economics and Global Affairs, Madrid, Spain"],
+        ["Application deadline", "November 6, 2026"],
+        ["Interviews", "European Job Market virtual meetings, December 14–17, 2026"]
+      ],
+      "body": [
+        {"p": "IE University is looking for applicants in macroeconomics to fill three tenure-track positions as Assistant or Associate Professor in the Department of Economics, starting September 1, 2027. Position duties include publishing in leading economic journals, teaching at the undergraduate and/or graduate levels, and contributing to the intellectual life of the School."},
+        {"p": "We are looking for candidates in Macroeconomics, Monetary Economics, or Time-series Econometrics."},
+        {"p": "Candidates are offered a competitive remuneration package, a dynamic research environment, and a cosmopolitan workplace in the heart of Madrid. English is the working language, and our faculty and students are highly diverse and international. Knowledge of Spanish is not required."},
+        {"p": "Applicants should have completed or be close to completing a Ph.D. in Economics, Finance, or a related field from an internationally recognized institution by July 2027."},
+        {"h": "Application Instructions"},
+        {"p": "Interested applicants should submit their materials through Interfolio by November 6, 2025. Applications should include:"},
+        {"ul": ["A cover letter", "Curriculum vitae", "Job market paper", "Three confidential letters of recommendation"]},
+        {"p": "Interviews will be conducted through the European Job Market virtual meetings held from the 14th to the 17th of December 2026."},
+        {"p": "For any questions regarding the application process, please contact Sara.Flores@ie.edu."},
+        {"p": "IE University is an Equal Opportunity Employer and strongly encourages applications from individuals who will enhance the ethnic and gender diversity of our faculty."}
+      ],
+      "url": null,
+      "url_label": "Apply through Interfolio"
+    }
+  ],
+  "placeholder": "There are no open calls at the moment. Details of upcoming positions will be posted here.",
+  "contact": ""
+}

@@ -1,0 +1,498 @@
+[
+  {
+    "authors": "Peter Karadi, Anton Nakov, Galo Nuño, Ernesto Pastén, Dominik Thaler",
+    "year": "forthcoming",
+    "title": "Strike while the Iron is Hot: Optimal Monetary Policy with a Nonlinear Phillips Curve",
+    "journal": "American Economic Review",
+    "volume_pages": "",
+    "url": "https://www.galonuno.com/research.html"
+  },
+  {
+    "authors": "Rodolfo G. Campos, Jesús Fernández-Villaverde, Galo Nuño, Peter Paz",
+    "year": "forthcoming",
+    "title": "Navigating by Falling Stars: Monetary Policy with Fiscally-Driven Natural Rates",
+    "journal": "Journal of Political Economy: Macroeconomics",
+    "volume_pages": "",
+    "url": "https://www.galonuno.com/research.html"
+  },
+  {
+    "authors": "Jesús Fernández-Villaverde, Galo Nuño, Jesse Perla",
+    "year": "forthcoming",
+    "title": "Taming the Curse of Dimensionality: Quantitative Economics with Deep Learning",
+    "journal": "Quantitative Economics",
+    "volume_pages": "",
+    "url": "https://www.galonuno.com/research.html"
+  },
+  {
+    "authors": "Clodomiro Ferreira, José Miguel Leiva, Galo Nuño, Álvaro Ortiz, Tomasa Rodrigo, Sirenia Vazquez",
+    "year": 2026,
+    "title": "The heterogeneous impact of inflation on households' balance sheets",
+    "journal": "SERIEs: Journal of the Spanish Economic Association",
+    "volume_pages": "17(1), 31-53",
+    "url": "https://doi.org/10.1007/s13209-025-00327-8"
+  },
+  {
+    "authors": "Jorge Abad, Galo Nuño, Carlos Thomas",
+    "year": 2025,
+    "title": "CBDC and the operational framework of monetary policy",
+    "journal": "Journal of Monetary Economics",
+    "volume_pages": "151, 103762",
+    "url": "https://doi.org/10.1016/j.jmoneco.2025.103762"
+  },
+  {
+    "authors": "James Costain, Galo Nuño, Carlos Thomas",
+    "year": 2025,
+    "title": "The Term Structure of Interest Rates in a Heterogeneous Monetary Union",
+    "journal": "Journal of Finance",
+    "volume_pages": "80(4), 2389-2434",
+    "url": "https://doi.org/10.1111/jofi.13463"
+  },
+  {
+    "authors": "Jesús Fernández-Villaverde, Joël Marbet, Galo Nuño, Omar Rachedi",
+    "year": 2025,
+    "title": "Inequality and the zero lower bound",
+    "journal": "Journal of Econometrics",
+    "volume_pages": "249, 105819",
+    "url": "https://doi.org/10.1016/j.jeconom.2024.105819"
+  },
+  {
+    "authors": "Jesús Fernández-Villaverde, Samuel Hurtado, Galo Nuño",
+    "year": 2023,
+    "title": "Financial Frictions and the Wealth Distribution",
+    "journal": "Econometrica",
+    "volume_pages": "91(3), 869-901",
+    "url": "https://doi.org/10.3982/ECTA18180"
+  },
+  {
+    "authors": "Saki Bigio, Galo Nuño, Juan Passadore",
+    "year": 2023,
+    "title": "Debt-Maturity Management with Liquidity Costs",
+    "journal": "Journal of Political Economy: Macroeconomics",
+    "volume_pages": "1(1), 119-190",
+    "url": "https://doi.org/10.1086/723392"
+  },
+  {
+    "authors": "Samuel Hurtado, Galo Nuño, Carlos Thomas",
+    "year": 2023,
+    "title": "Monetary Policy and Sovereign Debt Sustainability",
+    "journal": "Journal of the European Economic Association",
+    "volume_pages": "21(1), 293-325",
+    "url": "https://doi.org/10.1093/jeea/jvac035"
+  },
+  {
+    "authors": "Galo Nuño, Carlos Thomas",
+    "year": 2022,
+    "title": "Optimal Redistributive Inflation",
+    "journal": "Annals of Economics and Statistics",
+    "volume_pages": "146, 3-63",
+    "url": "https://doi.org/10.2307/48674138"
+  },
+  {
+    "authors": "Óscar Arce, Galo Nuño, Dominik Thaler, Carlos Thomas",
+    "year": 2020,
+    "title": "A large central bank balance sheet? Floor vs corridor systems in a New Keynesian environment",
+    "journal": "Journal of Monetary Economics",
+    "volume_pages": "114, 350-367",
+    "url": "https://doi.org/10.1016/j.jmoneco.2019.05.001"
+  },
+  {
+    "authors": "Daniel Fernández-Kranz, Jennifer Roff",
+    "year": 2026,
+    "title": "Alimony and marital commitment: the unintended consequences of alimony reform on assortative matching",
+    "journal": "Review of Economics of the Household",
+    "volume_pages": "24(2), 395-441",
+    "url": "https://doi.org/10.1007/s11150-025-09821-1"
+  },
+  {
+    "authors": "Daniel Fernández-Kranz, Natalia Nollenberger, Jennifer Roff",
+    "year": 2026,
+    "title": "Bargaining under Threats: The Effect of Joint Custody Laws on Intimate Partner Violence",
+    "journal": "American Journal of Health Economics",
+    "volume_pages": "12(1), 118-163",
+    "url": "https://doi.org/10.1086/731585"
+  },
+  {
+    "authors": "Esther Arenas-Arroyo, Daniel Fernández-Kranz, Natalia Nollenberger",
+    "year": 2025,
+    "title": "High speed internet and the widening gender gap in adolescent mental health: Evidence from Spanish hospital records",
+    "journal": "Journal of Health Economics",
+    "volume_pages": "102, 103014",
+    "url": "https://doi.org/10.1016/j.jhealeco.2025.103014"
+  },
+  {
+    "authors": "Daniel Fernández-Kranz, Jennifer Roff",
+    "year": 2025,
+    "title": "The effect of alimony on married women's labor supply and fertility: Evidence from state-level reforms",
+    "journal": "Journal of Policy Analysis and Management",
+    "volume_pages": "44(4), 1250-1285",
+    "url": "https://doi.org/10.1002/pam.22661"
+  },
+  {
+    "authors": "Daniel Fernández-Kranz, Natalia Nollenberger",
+    "year": 2022,
+    "title": "The impact of equal parenting time laws on family outcomes and risky behavior by teenagers: Evidence from Spain",
+    "journal": "Journal of Economic Behavior & Organization",
+    "volume_pages": "195, 303-325",
+    "url": "https://doi.org/10.1016/j.jebo.2022.01.001"
+  },
+  {
+    "authors": "Daniel Fernández-Kranz, Jennifer Roff, Hugette Sun",
+    "year": 2021,
+    "title": "Can economic incentives for joint custody harm children of divorced parents? Evidence from state variation in child support laws",
+    "journal": "Journal of Economic Behavior & Organization",
+    "volume_pages": "189, 1-27",
+    "url": "https://doi.org/10.1016/j.jebo.2021.06.020"
+  },
+  {
+    "authors": "Daniel Fernández-Kranz, Núria Rodríguez-Planas",
+    "year": 2021,
+    "title": "Too family friendly? The consequences of parent part-time working rights",
+    "journal": "Journal of Public Economics",
+    "volume_pages": "197, 104407",
+    "url": "https://doi.org/10.1016/j.jpubeco.2021.104407"
+  },
+  {
+    "authors": "Esther Arenas-Arroyo, Daniel Fernández-Kranz, Natalia Nollenberger",
+    "year": 2021,
+    "title": "Intimate partner violence under forced cohabitation and economic stress: Evidence from the COVID-19 pandemic",
+    "journal": "Journal of Public Economics",
+    "volume_pages": "194, 104350",
+    "url": "https://doi.org/10.1016/j.jpubeco.2020.104350"
+  },
+  {
+    "authors": "Santiago Acerenza, Liliana Gelabert, Martín Pereyra, Flavia Roldán",
+    "year": 2026,
+    "title": "Non-technological strategic alliances and public support for innovation: What are, if any, their links?",
+    "journal": "Research Policy",
+    "volume_pages": "55(4), 105433",
+    "url": "https://doi.org/10.1016/j.respol.2026.105433"
+  },
+  {
+    "authors": "Liliana Gelabert, Martín Pereyra, Flavia Roldán",
+    "year": 2026,
+    "title": "Public support prevalence and innovation behavior. Uruguay 2007–2015",
+    "journal": "Economics of Innovation and New Technology",
+    "volume_pages": "35(2), 326-354",
+    "url": "https://doi.org/10.1080/10438599.2025.2481317"
+  },
+  {
+    "authors": "Horacio E. Rousseau, Pascual Berrone, Liliana Gelabert",
+    "year": 2019,
+    "title": "Localizing Sustainable Development Goals: Nonprofit Density and City Sustainability",
+    "journal": "Academy of Management Discoveries",
+    "volume_pages": "5(4), 487-513",
+    "url": "https://doi.org/10.5465/amd.2018.0151"
+  },
+  {
+    "authors": "Adriana Hoyos, Patricia Gabaldón",
+    "year": 2026,
+    "title": "Wrapped Too Tight: The Impact of EU Regulatory Burden on the Competitiveness of Spain's Packaging-Intensive Industries",
+    "journal": "Research in Economics",
+    "volume_pages": "101181",
+    "url": "https://doi.org/10.1016/j.rie.2026.101181"
+  },
+  {
+    "authors": "Punit Arora, Patricia Gabaldón, Cynthia E. Clark, Priya Nagaraj",
+    "year": 2026,
+    "title": "Legitimacy at a Premium: When Do Firms Hire Comparatively Better (Lesser) Qualified Female Directors?",
+    "journal": "Corporate Governance: An International Review",
+    "volume_pages": "34(1), 180-207",
+    "url": "https://doi.org/10.1111/corg.70010"
+  },
+  {
+    "authors": "Stefan Gröschl, Patricia Gabaldón, Tobias Hahn, Elisabeth K. Kelan",
+    "year": 2025,
+    "title": "The Emergence and Effects of Sponsors for Women Leaders",
+    "journal": "Gender, Work & Organization",
+    "volume_pages": "32(5), 1786-1796",
+    "url": "https://doi.org/10.1111/gwao.13217"
+  },
+  {
+    "authors": "Isabel de Sivatte, Patricia Gabaldón",
+    "year": 2025,
+    "title": "How Institutional Financial Aid Relates to College Performance: A European Context",
+    "journal": "British Journal of Management",
+    "volume_pages": "36(3), 964-977",
+    "url": "https://doi.org/10.1111/1467-8551.12899"
+  },
+  {
+    "authors": "Cynthia E. Clark, Punit Arora, Patricia Gabaldón, Tanusree Jain",
+    "year": 2025,
+    "title": "Global Social Movements and the Governance of the Firm: Past, Present, and Future",
+    "journal": "Corporate Governance: An International Review",
+    "volume_pages": "33(4), 782-795",
+    "url": "https://doi.org/10.1111/corg.12625"
+  },
+  {
+    "authors": "Bartolomé Pascual-Fuster, Ryan Federo, Rafel Crespí-Cladera, Patricia Gabaldón",
+    "year": 2025,
+    "title": "The second glass ceiling: The dark side of women recategorization in corporate boards",
+    "journal": "Gender, Work & Organization",
+    "volume_pages": "32(3), 1018-1043",
+    "url": "https://doi.org/10.1111/gwao.13185"
+  },
+  {
+    "authors": "Ruth Mateos de Cabo, Ricardo Gimeno, Patricia Gabaldón, Pilar Grau",
+    "year": 2024,
+    "title": "The board gender diversity imitation game: Uncovering the resistant boards that refuse to play",
+    "journal": "Corporate Governance: An International Review",
+    "volume_pages": "32(5), 814-832",
+    "url": "https://doi.org/10.1111/corg.12568"
+  },
+  {
+    "authors": "Giovanna Campopiano, Patricia Gabaldón, Daniela Gimenez-Jimenez",
+    "year": 2023,
+    "title": "Women Directors and Corporate Social Performance: An Integrative Review of the Literature and a Future Research Agenda",
+    "journal": "Journal of Business Ethics",
+    "volume_pages": "182(3), 717-746",
+    "url": "https://doi.org/10.1007/s10551-021-04999-7"
+  },
+  {
+    "authors": "Valentina Tarkovska, Patricia Gabaldón, Raluca Valeria Ratiu",
+    "year": 2023,
+    "title": "The importance of a critical mass of women on boards to reduce the gender pay disparity among non-executive directors",
+    "journal": "Gender in Management: An International Journal",
+    "volume_pages": "38(6), 821-840",
+    "url": "https://doi.org/10.1108/GM-12-2021-0386"
+  },
+  {
+    "authors": "Gillian Warner-Søderholm, Patricia Gabaldón, Cathrine Seierstad, Carl Åberg",
+    "year": 2023,
+    "title": "Getting More Women on Boards: Cultural and Institutional Antecedents That Matter",
+    "journal": "SAGE Open",
+    "volume_pages": "13(3)",
+    "url": "https://doi.org/10.1177/21582440231193589"
+  },
+  {
+    "authors": "Audur Arna Arnardottir, Throstur Olaf Sigurjonsson, Patricia Gabaldón",
+    "year": 2023,
+    "title": "Gender diversity on corporate boards: Directors' perceptions of board functioning and gender quotas",
+    "journal": "Journal of Governance and Regulation",
+    "volume_pages": "12(2), 92-103",
+    "url": "https://doi.org/10.22495/jgrv12i2art9"
+  },
+  {
+    "authors": "Isabel Garcia-Lomas, Patricia Gabaldón",
+    "year": 2023,
+    "title": "Gender – From Variable to Lens in Social Enterprises: A Literature Review and Research Agenda for Women's Involvement in Social Ventures",
+    "journal": "Journal of Social Entrepreneurship",
+    "volume_pages": "14(2), 152-176",
+    "url": "https://doi.org/10.1080/19420676.2020.1852591"
+  },
+  {
+    "authors": "Ricardo Gimeno, Ruth Mateos de Cabo, Pilar Grau, Patricia Gabaldón",
+    "year": 2022,
+    "title": "Network diffusion of gender diversity on boards: A process of two-speed opposing forces",
+    "journal": "PLOS ONE",
+    "volume_pages": "17(11), e0277214",
+    "url": "https://doi.org/10.1371/journal.pone.0277214"
+  },
+  {
+    "authors": "Cynthia E. Clark, Punit Arora, Patricia Gabaldón",
+    "year": 2022,
+    "title": "Female Representation on Corporate Boards in Europe: The Interplay of Organizational Social Consciousness and Institutions",
+    "journal": "Journal of Business Ethics",
+    "volume_pages": "180(1), 165-186",
+    "url": "https://doi.org/10.1007/s10551-021-04898-x"
+  },
+  {
+    "authors": "Ruth Mateos de Cabo, Pilar Grau, Ricardo Gimeno, Patricia Gabaldón",
+    "year": 2022,
+    "title": "Shades of Power: Network Links with Gender Quotas and Corporate Governance Codes",
+    "journal": "British Journal of Management",
+    "volume_pages": "33(2), 703-723",
+    "url": "https://doi.org/10.1111/1467-8551.12454"
+  },
+  {
+    "authors": "Ignacio Alvarez de Mon, Patricia Gabaldón, Margarita Nuñez",
+    "year": 2022,
+    "title": "Social entrepreneurs: making sense of tensions through the application of alternative strategies of hybrid organizations",
+    "journal": "International Entrepreneurship and Management Journal",
+    "volume_pages": "18(2), 975-997",
+    "url": "https://doi.org/10.1007/s11365-020-00731-5"
+  },
+  {
+    "authors": "Miryam Martínez-Martínez, Manuel Molina-López, Ruth Mateos de Cabo, Patricia Gabaldón, Susana González-Pérez, Gregorio Izquierdo",
+    "year": 2021,
+    "title": "Awakenings: An Authentic Leadership Development Program to Break the Glass Ceiling",
+    "journal": "Sustainability",
+    "volume_pages": "13(13), 7476",
+    "url": "https://doi.org/10.3390/su13137476"
+  },
+  {
+    "authors": "Alessandra Rigolini, Patricia Gabaldón, Eskil Le Bruyn Goldeng",
+    "year": 2021,
+    "title": "CEO succession with gender change in troubled companies: The effect of a new woman CEO on firm risk and firm risk perceived",
+    "journal": "Scandinavian Journal of Management",
+    "volume_pages": "37(1), 101138",
+    "url": "https://doi.org/10.1016/j.scaman.2020.101138"
+  },
+  {
+    "authors": "Merlyn Gutiérrez Cruz, María Jesús Such Devesa, Patricia Gabaldón",
+    "year": 2021,
+    "title": "Factores de éxito en el emprendimiento femenino turístico rural en Costa Rica",
+    "journal": "Investigaciones Turísticas",
+    "volume_pages": "22, 148-175",
+    "url": "https://doi.org/10.14198/inturi2021.22.7"
+  },
+  {
+    "authors": "Sadi Boğaç Kanadlı, Mariateresa Torchia, Patricia Gabaldón, Andrea Calabrò",
+    "year": 2020,
+    "title": "Effects of Task Conflict on Board Task Performance in Family Firms: The Importance of Board Openness",
+    "journal": "Journal of Family Business Strategy",
+    "volume_pages": "11(2), 100350",
+    "url": "https://doi.org/10.1016/j.jfbs.2020.100350"
+  },
+  {
+    "authors": "Pilar Grau, Ruth Mateos de Cabo, Ricardo Gimeno, Elena Olmedo, Patricia Gabaldón",
+    "year": 2020,
+    "title": "Networks of Boards of Directors: Is the 'Golden Skirts' Only an Illusion?",
+    "journal": "Nonlinear Dynamics, Psychology, and Life Sciences",
+    "volume_pages": "24(2), 215-231",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32248888/"
+  },
+  {
+    "authors": "Patricia Gabaldón, Daniela Gimenez-Jimenez",
+    "year": 2020,
+    "title": "La importancia de la diversidad de género en las empresas innovadoras: un análisis de caso español",
+    "journal": "ICE, Revista de Economía",
+    "volume_pages": "912, 119-134",
+    "url": "https://doi.org/10.32796/ice.2020.912.6973"
+  },
+  {
+    "authors": "Merlyn Gutiérrez Cruz, María Jesús Such Devesa, Patricia Gabaldón",
+    "year": 2020,
+    "title": "La mujer emprendedora en el turismo rural: peculiaridades del caso costarricense a través de la revisión bibliográfica",
+    "journal": "Cuadernos de Turismo",
+    "volume_pages": "46, 185-214",
+    "url": null
+  },
+  {
+    "authors": "Oleksandra Cheipesh",
+    "year": 2025,
+    "title": "Hidden Costs of Ban the Box Laws: Unraveling the Effects on Drug-Related Deaths",
+    "journal": "Health Economics",
+    "volume_pages": "34(11), 2059-2071",
+    "url": "https://doi.org/10.1002/hec.70018"
+  },
+  {
+    "authors": "Jorge García-Hombrados, Marcel Jansen, Ángel Martínez, Berkay Özcan, Pedro Rey-Biel, Antonio Roldán-Monés",
+    "year": 2026,
+    "title": "Ideological Alignment and Evidence-Based Policy Adoption",
+    "journal": "American Economic Review",
+    "volume_pages": "116(7), 2574-2603",
+    "url": "https://doi.org/10.1257/aer.20240673"
+  },
+  {
+    "authors": "Antonio Roldán-Monés",
+    "year": "forthcoming",
+    "title": "When GenAI Increases Inequality: Evidence from a University Debating Competition",
+    "journal": "Management Science",
+    "volume_pages": "",
+    "url": "https://doi.org/10.2139/ssrn.7112578"
+  },
+  {
+    "authors": "Lucas Gortazar, Claudia Hupkau, Antonio Roldán-Monés",
+    "year": 2024,
+    "title": "Online tutoring works: Experimental evidence from a program with vulnerable children",
+    "journal": "Journal of Public Economics",
+    "volume_pages": "232, 105082",
+    "url": "https://doi.org/10.1016/j.jpubeco.2024.105082"
+  },
+  {
+    "authors": "Charles Palmer, Ben Groom, Lorenzo Sileci, Steve Langton",
+    "year": 2026,
+    "title": "Biodiversity–food trade-offs when agricultural land is spared from production",
+    "journal": "American Journal of Agricultural Economics",
+    "volume_pages": "108(1), 254-284",
+    "url": "https://doi.org/10.1111/ajae.12530"
+  },
+  {
+    "authors": "Ben Groom, Charles Palmer, Lorenzo Sileci",
+    "year": 2022,
+    "title": "Carbon emissions reductions from Indonesia's moratorium on forest concessions are cost-effective yet contribute little to Paris pledges",
+    "journal": "Proceedings of the National Academy of Sciences",
+    "volume_pages": "119(5), e2102613119",
+    "url": "https://doi.org/10.1073/pnas.2102613119"
+  },
+  {
+    "authors": "Amanda E. Bates, Richard B. Primack, Brandy S. Biggar, et al. (including Lorenzo Sileci)",
+    "year": 2021,
+    "title": "Global COVID-19 lockdown highlights humans as both threats and custodians of the environment",
+    "journal": "Biological Conservation",
+    "volume_pages": "263, 109175",
+    "url": "https://doi.org/10.1016/j.biocon.2021.109175"
+  },
+  {
+    "authors": "Mónica Amador-Jiménez, Naomi Millner, Charles Palmer, R. Toby Pennington, Lorenzo Sileci",
+    "year": 2020,
+    "title": "The Unintended Impact of Colombia's Covid-19 Lockdown on Forest Fires",
+    "journal": "Environmental and Resource Economics",
+    "volume_pages": "76(4), 1081-1105",
+    "url": "https://doi.org/10.1007/s10640-020-00501-5"
+  },
+  {
+    "authors": "Alex Armand, Mattia Fracchia, Pedro C. Vicente",
+    "year": 2024,
+    "title": "Let's call! Using the phone to increase vaccine acceptance",
+    "journal": "Health Economics",
+    "volume_pages": "33(1), 82-106",
+    "url": "https://doi.org/10.1002/hec.4760"
+  },
+  {
+    "authors": "Mattia Fracchia, Teresa Molina-Millán, Pedro C. Vicente",
+    "year": 2023,
+    "title": "Motivating volunteer health workers in an African capital city",
+    "journal": "Journal of Development Economics",
+    "volume_pages": "163, 103096",
+    "url": "https://doi.org/10.1016/j.jdeveco.2023.103096"
+  },
+  {
+    "authors": "Julio S. Solís Arce, Shana S. Warren, Niccolò F. Meriggi, et al. (including Mattia Fracchia)",
+    "year": 2021,
+    "title": "COVID-19 vaccine acceptance and hesitancy in low- and middle-income countries",
+    "journal": "Nature Medicine",
+    "volume_pages": "27(8), 1385-1394",
+    "url": "https://doi.org/10.1038/s41591-021-01454-y"
+  },
+  {
+    "authors": "Ghassane Benmir, Ivan Jaccard, Gauthier Vermandel",
+    "year": 2023,
+    "title": "Optimal monetary policy in an estimated SIR model",
+    "journal": "European Economic Review",
+    "volume_pages": "156, 104502",
+    "url": "https://doi.org/10.1016/j.euroecorev.2023.104502"
+  },
+  {
+    "authors": "Siqi Wei",
+    "year": 2025,
+    "title": "Estimating Latent-Variable Panel Data Models Using Parameter-Expanded SEM Methods",
+    "journal": "Journal of Business & Economic Statistics",
+    "volume_pages": "43(2), 324-337",
+    "url": "https://doi.org/10.1080/07350015.2024.2365783"
+  },
+  {
+    "authors": "Manuel Arellano, Stéphane Bonhomme, Micole De Vera, Laura Hospido, Siqi Wei",
+    "year": 2022,
+    "title": "Income Risk Inequality: Evidence from Spanish Administrative Records",
+    "journal": "Quantitative Economics",
+    "volume_pages": "13(4), 1747-1801",
+    "url": "https://doi.org/10.3982/QE1887"
+  },
+  {
+    "authors": "Maud Pindard-Lejarraga, Ainara González de San Román, José Lejarraga",
+    "year": 2026,
+    "title": "Institutional Context, Gender, and Venture Type: A Multilevel Analysis of Founders' Firm Size Expectations",
+    "journal": "Entrepreneurship & Regional Development",
+    "volume_pages": "",
+    "url": "https://doi.org/10.1080/08985626.2026.2695754"
+  },
+  {
+    "authors": "Rodrigo Alegría, Pablo Cárabe, Alejandro Chahoud, Ainara González de San Román",
+    "year": 2023,
+    "title": "The novel liquid learning system and the online gap in academic performance",
+    "journal": "Education Economics",
+    "volume_pages": "31(5), 599-616",
+    "url": "https://doi.org/10.1080/09645292.2022.2113860"
+  }
+]

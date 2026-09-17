@@ -1,0 +1,151 @@
+/* IE Economics Research Group (IEERG) — site stylesheet */
+:root {
+  --ink: #111111;
+  --muted: #5a5a5a;
+  --line: #d9d9d9;
+  --navy: #0b1e5b;   /* IE logo navy */
+  --teal: #1f9aa0;   /* IE logo teal */
+  --bg: #ffffff;
+  --bg-soft: #f6f7f9;
+  --serif: "Source Serif 4", "Libre Baskerville", Georgia, "Times New Roman", serif;
+  --sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--bg);
+}
+a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { color: var(--navy); }
+
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+header.top { border-bottom: 1px solid var(--line); }
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; padding: 14px 0;
+}
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand img { height: 56px; width: auto; }
+.brand .name { font-family: var(--serif); font-size: 18px; line-height: 1.2; color: var(--navy); }
+.brand .name small { display: block; font-family: var(--sans); font-size: 12px; color: var(--muted); letter-spacing: .02em; }
+.school-link { font-size: 13px; color: var(--muted); text-align: right; max-width: 220px; }
+
+nav.main { border-top: 1px solid var(--line); }
+nav.main ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 26px; }
+nav.main a {
+  display: inline-block; padding: 12px 0; text-decoration: none;
+  font-size: 15px; color: var(--ink); border-bottom: 3px solid transparent;
+}
+nav.main a:hover { color: var(--navy); }
+nav.main a.active { color: var(--navy); border-bottom-color: var(--navy); font-weight: 600; }
+
+/* Page title */
+h1.page-title {
+  font-family: var(--serif); font-weight: 400; text-align: center;
+  font-size: clamp(30px, 5.5vw, 52px); line-height: 1.15;
+  margin: 36px 0 18px;
+}
+h1.page-title + hr { border: 0; border-top: 1px solid var(--line); margin: 0 0 28px; }
+h2 { font-family: var(--serif); font-weight: 600; font-size: 24px; margin: 36px 0 12px; color: var(--navy); }
+h3 { font-size: 17px; margin: 22px 0 8px; }
+p { margin: 0 0 14px; }
+.lead { font-size: 17px; }
+.muted { color: var(--muted); }
+.note { font-size: 14px; color: var(--muted); }
+
+main { padding-bottom: 40px; }
+
+/* Home two-column */
+.home-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 36px; align-items: start; }
+.home-grid figure { margin: 0; }
+.home-grid figure img { width: 100%; height: auto; border: 1px solid var(--line); }
+.home-grid figcaption { font-size: 13px; color: var(--muted); margin-top: 6px; }
+.next-talk { background: var(--bg-soft); border-left: 4px solid var(--teal); padding: 14px 18px; margin: 8px 0 20px; }
+.next-talk .label { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.next-talk .who { font-family: var(--serif); font-size: 20px; }
+
+/* Faculty grid ("orla") */
+.faculty-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px 22px; margin-top: 10px;
+}
+.person { text-align: center; }
+.person img {
+  width: 100%; max-width: 190px; aspect-ratio: 1 / 1; object-fit: cover;
+  border-radius: 50%; border: 1px solid var(--line); display: block; margin: 0 auto 10px;
+}
+.person .pname { font-family: var(--serif); font-size: 18px; line-height: 1.25; }
+.person .pname a { text-decoration: none; }
+.person .pname a:hover { text-decoration: underline; }
+.person .ptitle { font-size: 13px; color: var(--muted); margin-top: 3px; }
+.person .pfields { font-size: 13px; margin-top: 4px; }
+.person .plinks { font-size: 12px; margin-top: 6px; }
+.person .plinks a { color: var(--muted); margin: 0 4px; }
+
+/* Faculty detail list */
+.bio-list { margin-top: 10px; }
+.bio { display: grid; grid-template-columns: 110px 1fr; gap: 18px; padding: 20px 0; border-top: 1px solid var(--line); }
+.bio img { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); }
+.bio .bname { font-family: var(--serif); font-size: 20px; }
+.bio .btitle { color: var(--muted); font-size: 14px; margin-bottom: 8px; }
+.bio p { margin-bottom: 8px; }
+.bio .blinks { font-size: 14px; }
+.bio .blinks a { margin-right: 14px; }
+
+/* Seminars */
+.logistics { background: var(--bg-soft); padding: 14px 18px; margin-bottom: 20px; }
+.talks { list-style: none; padding: 0; margin: 0; }
+.talks li { display: grid; grid-template-columns: 180px 1fr; gap: 14px; padding: 10px 0; border-top: 1px solid var(--line); }
+.talks li:last-child { border-bottom: 1px solid var(--line); }
+.talks .date { color: var(--muted); font-variant-numeric: tabular-nums; }
+.talks .speaker { font-family: var(--serif); font-size: 18px; }
+.talks .aff { color: var(--muted); }
+.talks .host { font-size: 13px; color: var(--muted); }
+.talks .internal { font-size: 12px; color: var(--teal); text-transform: uppercase; letter-spacing: .06em; margin-left: 6px; }
+.month { font-family: var(--serif); font-size: 20px; margin: 26px 0 6px; color: var(--navy); }
+
+/* Publications */
+.pub-year { font-family: var(--serif); font-size: 26px; color: var(--navy); margin: 34px 0 8px; padding-bottom: 4px; border-bottom: 2px solid var(--navy); }
+.pubs { list-style: none; padding: 0; margin: 0; }
+.pubs li { padding: 9px 0 9px 22px; text-indent: -22px; border-top: 1px solid var(--line); }
+.pubs li:last-child { border-bottom: 1px solid var(--line); }
+.pubs .t { font-style: italic; }
+.pubs .j { font-weight: 600; }
+.pubs .ieerg { color: var(--navy); font-weight: 600; }
+.pubs .fc { color: var(--teal); font-size: 13px; }
+
+/* Hiring */
+.callout { border: 1px solid var(--line); border-left: 4px solid var(--navy); padding: 18px 22px; margin: 16px 0; }
+
+footer { border-top: 1px solid var(--line); padding: 20px 0 30px; font-size: 13px; color: var(--muted); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+
+@media (max-width: 800px) {
+  .home-grid { grid-template-columns: 1fr; }
+  .faculty-grid { grid-template-columns: repeat(3, 1fr); gap: 22px 14px; }
+  .school-link { display: none; }
+}
+@media (max-width: 560px) {
+  .wrap { padding: 0 16px; }
+  .faculty-grid { grid-template-columns: repeat(2, 1fr); }
+  .bio { grid-template-columns: 80px 1fr; gap: 12px; }
+  .bio img { width: 80px; height: 80px; }
+  .talks li { grid-template-columns: 1fr; gap: 2px; }
+  nav.main ul { gap: 0 18px; }
+  nav.main a { font-size: 14px; padding: 10px 0; }
+}
+
+/* Hiring facts list */
+ul.facts { list-style: none; padding: 0; margin: 0 0 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 20px; font-size: 15px; }
+ul.facts li { padding: 4px 0; border-bottom: 1px solid var(--line); }
+@media (max-width: 560px) { ul.facts { grid-template-columns: 1fr; } }
+
+.ttl { font-style: italic; margin: 2px 0; }
+.next-talk .ttl { font-size: 15px; }

@@ -1,0 +1,183 @@
+{
+  "logistics": {
+    "weekday": "Thursdays",
+    "time": "14:00–15:00",
+    "venue": "María de Molina campus, Madrid",
+    "venue_url": "https://www.ie.edu/university/about/study-in-madrid/",
+    "room": "room to be confirmed"
+  },
+  "years": [
+    {
+      "label": "2026/27",
+      "current": true,
+      "talks": [
+        {
+          "date": "2026-09-17",
+          "speaker": "Rita Ginja",
+          "affiliation": "University of Bergen",
+          "url": "https://sites.google.com/site/rcginja/",
+          "host": "Daniel Fernández Kranz"
+        },
+        {
+          "date": "2026-09-24",
+          "speaker": "Laia Navarro-Solà",
+          "affiliation": "Stockholm University",
+          "url": "https://www.laianavarrosola.com/",
+          "host": "Toni Roldán",
+          "title": "Teaching Practices, Behavioral Change, and Socio-Emotional Skill Formation",
+          "room": "María de Molina 11-13-15, Room 203"
+        },
+        {
+          "date": "2026-10-01",
+          "speaker": "Hyunjae (Jay) Kang",
+          "affiliation": "Kyoto University",
+          "url": "https://www.hyunjaekang.com/",
+          "host": "Daniel Fernández Kranz"
+        },
+        {
+          "date": "2026-10-15",
+          "speaker": "Martina Repetto",
+          "affiliation": "University of Melbourne",
+          "url": "https://martinarepetto.com/",
+          "host": "Daniel Fernández Kranz"
+        },
+        {
+          "date": "2026-10-22",
+          "speaker": "Javier Soria Espín",
+          "affiliation": "Paris School of Economics and Harvard University",
+          "url": "https://sites.google.com/view/javier-soria-espin/home",
+          "host": "Toni Roldán"
+        },
+        {
+          "date": "2026-10-29",
+          "speaker": "Ludovica Gazze",
+          "affiliation": "University of Warwick",
+          "url": "https://sites.google.com/view/ludovicagazze",
+          "host": "Lorenzo Sileci"
+        },
+        {
+          "date": "2026-11-12",
+          "speaker": "Pedro Llanos-Paredes",
+          "affiliation": "University of Oxford",
+          "url": "https://sites.google.com/view/pmllanos/",
+          "host": "Daniel Fernández Kranz"
+        },
+        {
+          "date": "2026-11-19",
+          "speaker": "Victoria Baranov",
+          "affiliation": "University of Melbourne",
+          "url": "https://sites.google.com/site/victoriabaranov/home",
+          "host": "Daniel Fernández Kranz"
+        },
+        {
+          "date": "2026-11-26",
+          "speaker": "Christine Valente",
+          "affiliation": "University of Bristol",
+          "url": "https://www.christinevalente.com/",
+          "host": "Siqi Wei"
+        },
+        {
+          "date": "2026-12-03",
+          "speaker": "Ainara González de San Román",
+          "affiliation": "IE University",
+          "url": null,
+          "host": null,
+          "internal": true
+        },
+        {
+          "date": "2026-12-10",
+          "speaker": "María Hernández-de-Benito",
+          "affiliation": "CUNEF Universidad",
+          "url": "https://sites.google.com/view/mariahernandezdebenito/home",
+          "host": "Mattia Fracchia"
+        },
+        {
+          "date": "2027-03-04",
+          "speaker": "Siqi Wei",
+          "affiliation": "IE University",
+          "url": null,
+          "host": null,
+          "internal": true
+        },
+        {
+          "date": "2027-03-11",
+          "speaker": "Lorenzo Sileci",
+          "affiliation": "IE University",
+          "url": null,
+          "host": null,
+          "internal": true
+        },
+        {
+          "date": "2027-03-18",
+          "speaker": "Sasha Cheipesh",
+          "affiliation": "IE University",
+          "url": null,
+          "host": null,
+          "internal": true
+        },
+        {
+          "date": "2027-04-01",
+          "speaker": "Søren Leth-Petersen",
+          "affiliation": "University of Copenhagen",
+          "url": "https://sites.google.com/view/sorenleth",
+          "host": "Siqi Wei"
+        },
+        {
+          "date": "2027-04-15",
+          "speaker": "Lídia Farré",
+          "affiliation": "University of Barcelona",
+          "url": "https://sites.google.com/site/lidiafarre78/home",
+          "host": "Daniel Fernández Kranz"
+        },
+        {
+          "date": "2027-04-22",
+          "speaker": "Charles Palmer",
+          "affiliation": "London School of Economics",
+          "url": "https://personal.lse.ac.uk/palmerc2/",
+          "host": "Lorenzo Sileci"
+        },
+        {
+          "date": "2027-04-29",
+          "speaker": "Timo Boppart",
+          "affiliation": "University of Zurich",
+          "url": "https://www.econ.uzh.ch/en/people/faculty/boppart.html",
+          "host": "Ghassane Benmir"
+        },
+        {
+          "date": "2027-05-06",
+          "speaker": "César Garro-Marín",
+          "affiliation": "University of Edinburgh",
+          "url": "https://www.cesargarromarin.com/",
+          "host": "Siqi Wei"
+        },
+        {
+          "date": "2027-05-13",
+          "speaker": "Christina Gathmann",
+          "affiliation": "LISER",
+          "url": "https://sites.google.com/view/christina-gathmann/start",
+          "host": "Sasha Cheipesh"
+        },
+        {
+          "date": "2027-05-27",
+          "speaker": "Jonas Hjort",
+          "affiliation": "University College London",
+          "url": "https://sites.google.com/site/jonashjort/",
+          "host": "Mattia Fracchia"
+        }
+      ]
+    },
+    {
+      "label": "2027/28",
+      "current": false,
+      "talks": [
+        {
+          "date": "2027-10-07",
+          "speaker": "Warn N. Lekfuangfu",
+          "affiliation": "Universidad Carlos III de Madrid",
+          "url": "https://npwarn.wixsite.com/warn-lekfuangfu",
+          "host": "Mattia Fracchia"
+        }
+      ]
+    }
+  ]
+}
