@@ -19,8 +19,8 @@ Department of Economics at IE University (SPEGA).
 
 ## Where it is published
 
-Live site: https://danielfernandezkranz-cmyk.github.io/ieerg/
-Repository: https://github.com/danielfernandezkranz-cmyk/ieerg (GitHub Pages serves the `docs/` folder of the `main` branch).
+Live site: https://ieerg.github.io/
+Repository: https://github.com/ieerg/ieerg.github.io (GitHub Pages serves the `docs/` folder of the `main` branch).
 
 ## Updating the site
 
