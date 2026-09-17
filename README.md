@@ -17,11 +17,18 @@ Department of Economics at IE University (SPEGA).
 | `build.py` | Generates the five HTML pages in `docs/` from the JSON files. |
 | `merge_research.py` | One-off helper used to create the first `faculty.json` / `publications.json` from the web research in `data/research/`. Not needed again. |
 
+## Where it is published
+
+Live site: https://danielfernandezkranz-cmyk.github.io/ieerg/
+Repository: https://github.com/danielfernandezkranz-cmyk/ieerg (GitHub Pages serves the `docs/` folder of the `main` branch).
+
 ## Updating the site
 
 1. Edit the relevant JSON file in `data/` (any text editor; keep the quotes and commas).
 2. Run `python build.py` from this folder.
-3. Upload the contents of `docs/` again.
+3. Publish: `git add -A`, `git commit -m "describe the change"`, `git push`. The live site updates within about a minute.
+
+The PowerPoint, Excel and Word source documents in this folder are deliberately excluded from the repository (see `.gitignore`).
 
 To add a faculty member: add a 400x400 JPEG named `<slug>.jpg` to `docs/img/` (slug = lower-case name, accents removed, hyphens for spaces), add the entry to `data/faculty.json`, add their papers to `data/publications.json`, and optionally regenerate `faculty-montage.jpg`.
 
