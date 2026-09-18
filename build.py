@@ -333,7 +333,7 @@ def subscribe_box():
     import urllib.parse
     ics_url = SITE_URL + ICS_NAME
     webcal = "webcal://" + ics_url.split("://", 1)[1]
-    gcal = "https://calendar.google.com/calendar/render?cid=" + urllib.parse.quote(ics_url, safe="")
+    gcal = "https://calendar.google.com/calendar/r?cid=" + webcal
     return f"""
     <div class="subscribe" id="subscribe">
       <strong>Add the seminar series to your calendar.</strong>
@@ -343,7 +343,8 @@ def subscribe_box():
         <a href="{webcal}">Outlook / Apple Calendar</a>
         <a href="{ics_url}" target="_blank" rel="noopener">Download .ics</a>
       </div>
-      <div class="note">Feed address, for any other calendar app: <code>{ics_url}</code></div>
+      <div class="note">Feed address, for any other calendar app: <code>{ics_url}</code><br>
+      In Google Calendar you can also add it by hand: next to “Other calendars” click <strong>+</strong>, choose <strong>From URL</strong>, paste the address above and click <strong>Add calendar</strong>.</div>
     </div>"""
 
 def build_publications(pubs, faculty):
