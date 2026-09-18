@@ -347,6 +347,23 @@ def subscribe_box():
       In Google Calendar you can also add it by hand: next to “Other calendars” click <strong>+</strong>, choose <strong>From URL</strong>, paste the address above and click <strong>Add calendar</strong>.</div>
     </div>"""
 
+def mark_names(text, faculty):
+    """Bold every IEERG member's name in an author string and link it to the
+    member's personal web page (author_forms in faculty.json lists the name
+    variants to recognise)."""
+    forms = {}
+    for p in faculty:
+        for k in p.get("author_forms", []) or []:
+            forms[esc(k)] = p.get("website")
+    keys = sorted(forms, key=len, reverse=True)
+    pat = r"(?<![\w])(" + "|".join(re.escape(k) for k in keys) + r")(?![\w])"
+    def repl(m):
+        name, url = m.group(1), forms.get(m.group(1))
+        if url:
+            return f'<a class="ieerg" href="{esc(url)}" target="_blank" rel="noopener">{name}</a>'
+        return f'<span class="ieerg">{name}</span>'
+    return re.sub(pat, repl, esc(text))
+
 def build_publications(pubs, faculty):
     fac_names = {p["name"] for p in faculty}
     # map surnames/short forms to bold IEERG members inside author strings
@@ -355,9 +372,7 @@ def build_publications(pubs, faculty):
         bold_keys.extend(p.get("author_forms", []) or [])
     bold_keys.sort(key=len, reverse=True)
 
-    def mark_authors(a):
-        pat = r"(?<![\w])(" + "|".join(re.escape(esc(k)) for k in bold_keys) + r")(?![\w])"
-        return re.sub(pat, r'<span class="ieerg">\1</span>', esc(a))
+    mark_authors = lambda a: mark_names(a, faculty)
 
     def year_key(p):
         y = str(p["year"]).lower()
@@ -396,9 +411,7 @@ def build_working_papers(wps, faculty):
     bold_keys.sort(key=len, reverse=True)
     fac_names = {p["name"] for p in faculty}
 
-    def mark(s):
-        pat = r"(?<![\w])(" + "|".join(re.escape(esc(k)) for k in bold_keys) + r")(?![\w])"
-        return re.sub(pat, r'<span class="ieerg">\1</span>', esc(s))
+    mark = lambda a: mark_names(a, faculty)
 
     topics = []
     for p in sorted(wps, key=lambda p: p["order"]):
