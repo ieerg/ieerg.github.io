@@ -14,7 +14,7 @@ Department of Economics at IE University (SPEGA).
 | `data/publications.json` | Journal articles, one object each (authors, year, title, journal, volume/pages, url). Use `"year": "forthcoming"` for accepted papers. |
 | `data/home.json` | Home page text: intro, mailing-list line, organizers, visitor-access instructions. |
 | `data/hiring.json` | "We are hiring" page: intro, list of open positions (title, text, deadline, url), placeholder text when there are none. |
-| `build.py` | Generates the five HTML pages in `docs/` from the JSON files. |
+| `build.py` | Generates the five HTML pages in `docs/` from the JSON files, plus `docs/seminars.ics`, the calendar feed people subscribe to (rebuilt from `seminars.json` on every build, so calendars update by themselves). |
 | `merge_research.py` | One-off helper used to create the first `faculty.json` / `publications.json` from the web research in `data/research/`. Not needed again. |
 
 ## Where it is published
