@@ -176,3 +176,5 @@ ul.toc a:hover { text-decoration: underline; }
 .faculty-link { text-align: center; margin: -8px 0 26px; }
 .faculty-link a { display: inline-block; padding: 9px 18px; border: 1px solid var(--navy); border-radius: 4px; color: var(--navy); font-weight: 600; text-decoration: none; }
 .faculty-link a:hover { background: var(--navy); color: #fff; }
+a.ieerg { color: var(--navy); font-weight: 600; text-decoration: none; }
+a.ieerg:hover { text-decoration: underline; }
