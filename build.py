@@ -29,6 +29,7 @@ def link(text, url, cls=None, new_tab=True):
 SCHOOL_URL = "https://www.ie.edu/school-politics-economics-global-affairs/"
 DEPT_URL = ("https://www.ie.edu/school-politics-economics-global-affairs/faculty/"
             "?FACULTY_CATEGORY=17173&ACADEMIC_AREA=29470&page=1")
+IE_RESEARCH_URL = "https://www.ie.edu/research/"
 
 NAV = [
     ("index.html", "Home"),
@@ -76,7 +77,7 @@ def page(title, active, body, description=""):
 <footer>
   <div class="wrap">
     <span>© {year} IE Economics Research Group · <a href="{DEPT_URL}" target="_blank" rel="noopener">Department of Economics</a>, <a href="{SCHOOL_URL}" target="_blank" rel="noopener">IE University</a></span>
-    <span>Madrid, Spain</span>
+    <span><a href="{IE_RESEARCH_URL}" target="_blank" rel="noopener">Research at IE University</a> · Madrid, Spain</span>
   </div>
 </footer>
 </body>
@@ -151,6 +152,7 @@ def build_home(faculty, seminars, home):
         {next_box}
         <h2>Visiting us</h2>
         <p>{esc(home['access'])}</p>
+        <p class="note">To learn more about research across IE University, visit <a href="{IE_RESEARCH_URL}" target="_blank" rel="noopener">IE Research</a>.</p>
       </div>
       <figure>
         <a href="faculty.html"><img src="img/faculty-montage.jpg" alt="Research faculty of the IE Economics Research Group"></a>
