@@ -180,8 +180,8 @@ a.ieerg { color: var(--navy); font-weight: 600; text-decoration: none; }
 a.ieerg:hover { text-decoration: underline; }
 
 /* Home: linked faculty portraits */
-.montage { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; padding: 8px; border: 1px solid var(--line); background: #fff; max-width: 260px; margin: 0 auto; }
-.home-grid figcaption { text-align: center; max-width: 260px; margin: 6px auto 0; }
+.montage { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; padding: 8px; border: 1px solid var(--line); background: #fff; max-width: 300px; margin: 0 auto; }
+.home-grid figcaption { text-align: center; max-width: 300px; margin: 6px auto 0; }
 .montage a { display: block; }
 .montage img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%; display: block; transition: transform .15s; }
 .montage a:hover img { transform: scale(1.06); }
