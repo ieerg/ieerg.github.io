@@ -134,7 +134,7 @@ def build_home(faculty, seminars, home):
                        if organizers else "")
 
     body = f"""
-    <h1 class="page-title">IE Economics Research Group</h1>
+    <h1 class="page-title">IE Economics Research Group Seminar Series</h1>
     <hr>
     <p class="faculty-link"><a href="{DEPT_URL}" target="_blank" rel="noopener">Faculty of the Department of Economics &rarr;</a></p>
     <div class="home-grid">
