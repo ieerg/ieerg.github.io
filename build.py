@@ -39,6 +39,8 @@ NAV = [
     ("working-papers.html", "Working papers"),
 ]
 
+CSS_VERSION = datetime.datetime.now().strftime("%Y%m%d%H%M")
+
 def page(title, active, body, description=""):
     nav = "".join(
         f'<li><a href="{href}"{" class=\"active\"" if href == active else ""}>{esc(label)}</a></li>'
@@ -54,7 +56,7 @@ def page(title, active, body, description=""):
 <meta name="description" content="{esc(description or 'IE Economics Research Group (IEERG), Department of Economics, IE University School of Politics, Economics and Global Affairs, Madrid.')}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v={CSS_VERSION}">
 </head>
 <body>
 <header class="top">
