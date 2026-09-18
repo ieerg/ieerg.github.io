@@ -357,10 +357,8 @@ def build_publications(pubs, faculty):
     bold_keys.sort(key=len, reverse=True)
 
     def mark_authors(a):
-        out = esc(a)
-        for k in bold_keys:
-            out = re.sub(r"(?<![\w])(" + re.escape(esc(k)) + r")(?![\w])", r'<span class="ieerg">\1</span>', out)
-        return out
+        pat = r"(?<![\w])(" + "|".join(re.escape(esc(k)) for k in bold_keys) + r")(?![\w])"
+        return re.sub(pat, r'<span class="ieerg">\1</span>', esc(a))
 
     def year_key(p):
         y = str(p["year"]).lower()
@@ -400,10 +398,8 @@ def build_working_papers(wps, faculty):
     fac_names = {p["name"] for p in faculty}
 
     def mark(s):
-        out = esc(s)
-        for k in bold_keys:
-            out = re.sub(r"(?<![\w])(" + re.escape(esc(k)) + r")(?![\w])", r'<span class="ieerg">\1</span>', out)
-        return out
+        pat = r"(?<![\w])(" + "|".join(re.escape(esc(k)) for k in bold_keys) + r")(?![\w])"
+        return re.sub(pat, r'<span class="ieerg">\1</span>', esc(s))
 
     topics = []
     for p in sorted(wps, key=lambda p: p["order"]):
