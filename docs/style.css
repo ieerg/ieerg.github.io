@@ -149,3 +149,10 @@ ul.facts li { padding: 4px 0; border-bottom: 1px solid var(--line); }
 
 .ttl { font-style: italic; margin: 2px 0; }
 .next-talk .ttl { font-size: 15px; }
+
+/* Calendar subscription box */
+.subscribe { border: 1px solid var(--line); border-left: 4px solid var(--teal); padding: 14px 18px; margin: 0 0 24px; font-size: 15px; }
+.subscribe .sub-links { margin: 10px 0 6px; display: flex; flex-wrap: wrap; gap: 10px; }
+.subscribe .sub-links a { display: inline-block; padding: 6px 14px; border: 1px solid var(--navy); border-radius: 4px; text-decoration: none; color: var(--navy); font-weight: 600; font-size: 14px; }
+.subscribe .sub-links a:hover { background: var(--navy); color: #fff; }
+.subscribe code { font-size: 13px; word-break: break-all; }

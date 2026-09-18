@@ -121,7 +121,7 @@ def build_home(faculty, seminars, home):
         <div class="label">Next seminar · {esc(fmt_date(nxt['date']))}</div>
         <div class="who">{link(nxt['speaker'], nxt.get('url'))} <span class="muted">({esc(nxt['affiliation'])})</span></div>
         {title}
-        <div class="note">{esc(lg['weekday'])}, {esc(lg['time'])} · {esc(where)} · <a href="seminars.html">Full programme</a></div>
+        <div class="note">{esc(lg['weekday'])}, {esc(lg['time'])} · {esc(where)} · <a href="seminars.html">Full programme</a> · <a href="seminars.html#subscribe">Add to your calendar</a></div>
       </div>"""
 
     def org(o):
@@ -254,10 +254,97 @@ def build_seminars(seminars, faculty):
       <strong>{esc(lg['weekday'])}, {esc(lg['time'])}</strong> · {link(lg['venue'], lg.get('venue_url'))} ({esc(lg['room'])}).
       Economics and Political Science faculty, researchers and students are warmly invited.
     </div>
+    {subscribe_box()}
     {''.join(sections)}
     <p class="note" style="margin-top:22px">Dates may change; the page is updated as the programme is confirmed.</p>
 """
     return page("Seminar series", "seminars.html", body)
+
+SITE_URL = "https://ieerg.github.io/"
+ICS_NAME = "seminars.ics"
+
+def ics_escape(s):
+    return (s or "").replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
+
+def ics_fold(line):
+    # RFC 5545: lines longer than 75 octets are folded with CRLF + space
+    out, cur = [], ""
+    for ch in line:
+        if len((cur + ch).encode("utf-8")) > 74:
+            out.append(cur); cur = " " + ch
+        else:
+            cur += ch
+    out.append(cur)
+    return "\r\n".join(out)
+
+def build_ics(seminars, faculty):
+    lg = seminars["logistics"]
+    fac_by_name = {p["name"]: p for p in faculty}
+    t0, t1 = lg["time"].replace("–", "-").split("-")   # "14:00–15:00"
+    h0, m0 = t0.strip().split(":"); h1, m1 = t1.strip().split(":")
+    stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    lines = [
+        "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//IEERG//Economics Research Seminar Series//EN",
+        "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+        "X-WR-CALNAME:IEERG Economics Research Seminar Series",
+        "X-WR-TIMEZONE:Europe/Madrid",
+        "X-WR-CALDESC:Economics Research Seminar Series of the IE Economics Research Group (IEERG)\\, IE University\\, Madrid. Updated automatically from " + SITE_URL + "seminars.html",
+        "REFRESH-INTERVAL;VALUE=DURATION:PT12H", "X-PUBLISHED-TTL:PT12H",
+        "BEGIN:VTIMEZONE", "TZID:Europe/Madrid",
+        "BEGIN:DAYLIGHT", "TZOFFSETFROM:+0100", "TZOFFSETTO:+0200", "TZNAME:CEST",
+        "DTSTART:19700329T020000", "RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU", "END:DAYLIGHT",
+        "BEGIN:STANDARD", "TZOFFSETFROM:+0200", "TZOFFSETTO:+0100", "TZNAME:CET",
+        "DTSTART:19701025T030000", "RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU", "END:STANDARD",
+        "END:VTIMEZONE",
+    ]
+    for y in seminars["years"]:
+        for t in y["talks"]:
+            if not t.get("speaker"): continue
+            d = t["date"].replace("-", "")
+            url = t.get("url")
+            if t.get("internal") and not url:
+                fp = fac_by_name.get(t["speaker"]); url = fp.get("website") if fp else None
+            summary = f"IEERG Seminar: {t['speaker']} ({t['affiliation']})"
+            desc = []
+            if t.get("title"): desc.append(f"\u201c{t['title']}\u201d")
+            if t.get("host"): desc.append(f"Host: {t['host']}")
+            if url: desc.append(f"Speaker: {url}")
+            desc.append(f"Programme: {SITE_URL}seminars.html")
+            location = t.get("room") or f"{lg['venue']} ({lg['room']})"
+            lines += [
+                "BEGIN:VEVENT",
+                f"UID:ieerg-seminar-{t['date']}@ieerg.github.io",
+                f"DTSTAMP:{stamp}",
+                f"DTSTART;TZID=Europe/Madrid:{d}T{h0}{m0}00",
+                f"DTEND;TZID=Europe/Madrid:{d}T{h1}{m1}00",
+                f"SUMMARY:{ics_escape(summary)}",
+                f"DESCRIPTION:{ics_escape(chr(10).join(desc))}",
+                f"LOCATION:{ics_escape(location)}",
+                f"URL:{url or SITE_URL + 'seminars.html'}",
+                "END:VEVENT",
+            ]
+    lines.append("END:VCALENDAR")
+    body = "\r\n".join(ics_fold(l) for l in lines) + "\r\n"
+    with open(os.path.join(SITE, ICS_NAME), "w", encoding="utf-8", newline="") as f:
+        f.write(body)
+    print("wrote", ICS_NAME)
+
+def subscribe_box():
+    import urllib.parse
+    ics_url = SITE_URL + ICS_NAME
+    webcal = "webcal://" + ics_url.split("://", 1)[1]
+    gcal = "https://calendar.google.com/calendar/render?cid=" + urllib.parse.quote(ics_url, safe="")
+    return f"""
+    <div class="subscribe" id="subscribe">
+      <strong>Add the seminar series to your calendar.</strong>
+      Subscribe once and every talk, with any later change of date, speaker or room, appears in your calendar automatically.
+      <div class="sub-links">
+        <a href="{gcal}" target="_blank" rel="noopener">Google Calendar</a>
+        <a href="{webcal}">Outlook / Apple Calendar</a>
+        <a href="{ics_url}" target="_blank" rel="noopener">Download .ics</a>
+      </div>
+      <div class="note">Feed address, for any other calendar app: <code>{ics_url}</code></div>
+    </div>"""
 
 def build_publications(pubs, faculty):
     fac_names = {p["name"] for p in faculty}
@@ -352,6 +439,7 @@ def main():
     write("seminars.html", build_seminars(seminars, faculty))
     write("publications.html", build_publications(pubs, faculty))
     write("hiring.html", build_hiring(hiring))
+    build_ics(seminars, faculty)
 
 if __name__ == "__main__":
     main()
