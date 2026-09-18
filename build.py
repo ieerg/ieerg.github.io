@@ -36,6 +36,7 @@ NAV = [
     ("faculty.html", "Faculty"),
     ("seminars.html", "Seminar series"),
     ("publications.html", "Publications"),
+    ("working-papers.html", "Working papers"),
     ("hiring.html", "We are hiring"),
 ]
 
@@ -391,6 +392,56 @@ def build_publications(pubs, faculty):
 """
     return page("Publications", "publications.html", body)
 
+def build_working_papers(wps, faculty):
+    bold_keys = []
+    for p in faculty:
+        bold_keys.extend(p.get("author_forms", []) or [])
+    bold_keys.sort(key=len, reverse=True)
+    fac_names = {p["name"] for p in faculty}
+
+    def mark(s):
+        out = esc(s)
+        for k in bold_keys:
+            out = re.sub(r"(?<![\w])(" + re.escape(esc(k)) + r")(?![\w])", r'<span class="ieerg">\1</span>', out)
+        return out
+
+    topics = []
+    for p in sorted(wps, key=lambda p: p["order"]):
+        if not topics or topics[-1][0] != p["topic"]:
+            topics.append((p["topic"], []))
+        topics[-1][1].append(p)
+
+    toc = "".join(f'<li><a href="#topic-{i+1}">{esc(t)}</a> <span class="muted">({len(ps)})</span></li>'
+                  for i, (t, ps) in enumerate(topics))
+    sections = []
+    for i, (t, ps) in enumerate(topics):
+        items = []
+        for p in ps:
+            members = [m.strip() for m in p["faculty"].split(";")]
+            authors = ", ".join(members) + (", " + p["coauthors"] if p.get("coauthors") else "")
+            meta = [x for x in [p.get("series"), p.get("status")] if x and x != "Working paper"]
+            meta_html = f'<div class="wp-meta">{esc(" · ".join(meta))}</div>' if meta else ""
+            items.append(f"""
+        <li>
+          <div class="wp-title">{link(p['title'], p.get('url'))}</div>
+          <div class="wp-authors">{mark(authors)}</div>
+          {meta_html}
+          <p class="wp-summary">{esc(p['summary'])}</p>
+        </li>""")
+        sections.append(f'<h2 id="topic-{i+1}">{esc(t)}</h2><ul class="wps">{"".join(items)}</ul>')
+
+    body = f"""
+    <h1 class="page-title">What We Are Working On</h1>
+    <hr>
+    <p class="lead">Current research of the IE Economics Research Group: working papers with a downloadable draft,
+    grouped by broad topic. Click a title to read the paper. Names of IEERG members appear in <span class="ieerg">bold</span>.
+    Published articles are listed under <a href="publications.html">Publications</a>.</p>
+    <ul class="toc">{toc}</ul>
+    {''.join(sections)}
+    <p class="note" style="margin-top:26px">Drafts are preliminary and may be updated; please cite the latest version on the authors' web pages.</p>
+"""
+    return page("Working papers", "working-papers.html", body)
+
 def build_hiring(hiring):
     positions = hiring.get("positions") or []
     if positions:
@@ -440,6 +491,7 @@ def main():
     write("seminars.html", build_seminars(seminars, faculty))
     write("publications.html", build_publications(pubs, faculty))
     write("hiring.html", build_hiring(hiring))
+    write("working-papers.html", build_working_papers(load("working_papers.json"), faculty))
     build_ics(seminars, faculty)
 
 if __name__ == "__main__":

@@ -13,8 +13,9 @@ Department of Economics at IE University (SPEGA).
 | `data/seminars.json` | Seminar logistics and the talks by academic year (date, speaker, affiliation, speaker web page, host, `internal: true` for internal speakers). Add a new `years` block for each academic year; older years stay as the archive. |
 | `data/publications.json` | Journal articles, one object each (authors, year, title, journal, volume/pages, url). Use `"year": "forthcoming"` for accepted papers. |
 | `data/home.json` | Home page text: intro, mailing-list line, organizers, visitor-access instructions. |
+| `data/working_papers.json` | Working papers for the "Working papers" tab: faculty, coauthors, title, series, status, url, one-line summary, `topic` and `order` (display order within the page). To add a paper, copy an entry and give it the topic name exactly as spelled in the others. |
 | `data/hiring.json` | "We are hiring" page: intro, list of open positions (title, text, deadline, url), placeholder text when there are none. |
-| `build.py` | Generates the five HTML pages in `docs/` from the JSON files, plus `docs/seminars.ics`, the calendar feed people subscribe to (rebuilt from `seminars.json` on every build, so calendars update by themselves). |
+| `build.py` | Generates the six HTML pages in `docs/` from the JSON files, plus `docs/seminars.ics`, the calendar feed people subscribe to (rebuilt from `seminars.json` on every build, so calendars update by themselves). |
 | `merge_research.py` | One-off helper used to create the first `faculty.json` / `publications.json` from the web research in `data/research/`. Not needed again. |
 
 ## Where it is published
