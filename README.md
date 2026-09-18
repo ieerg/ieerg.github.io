@@ -8,7 +8,7 @@ Department of Economics at IE University (SPEGA).
 | Path | What it is |
 |---|---|
 | `docs/` | The finished web site. Upload the **contents** of this folder to any web host (GitHub Pages, IE web space, Netlify, etc.). Open `docs/index.html` locally to preview. |
-| `docs/img/` | The faculty montage shown on the home page. Individual photos are kept in `data/photos/` (not published). |
+| `docs/img/` | The faculty montage shown on the home page. The eleven portraits shown as a linked grid on the home page (`<slug>.jpg`, 400x400). |
 | `data/faculty.json` | One entry per research faculty member (name, links, author-name variants). No faculty page is built any more (the home page links to IE's faculty list instead), but the file still drives the bolding of IEERG names and the internal-speaker links. |
 | `data/seminars.json` | Seminar logistics and the talks by academic year (date, speaker, affiliation, speaker web page, host, `internal: true` for internal speakers). Add a new `years` block for each academic year; older years stay as the archive. |
 | `data/publications.json` | Journal articles, one object each (authors, year, title, journal, volume/pages, url). Use `"year": "forthcoming"` for accepted papers. |

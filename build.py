@@ -155,7 +155,9 @@ def build_home(faculty, seminars, home):
         <p class="note">To learn more about research across IE University, visit <a href="{IE_RESEARCH_URL}" target="_blank" rel="noopener">IE Research</a>.</p>
       </div>
       <figure>
-        <a href="{DEPT_URL}" target="_blank" rel="noopener"><img src="img/faculty-montage.jpg" alt="Research faculty of the IE Economics Research Group"></a>
+        <div class="montage">{''.join(
+            f'<a href="{esc(p.get("website") or DEPT_URL)}" target="_blank" rel="noopener" title="{esc(p["name"])}">'
+            f'<img src="img/{esc(p["slug"])}.jpg" alt="{esc(p["name"])}"></a>' for p in faculty)}</div>
         <figcaption>Research faculty of the Department of Economics. <a href="{DEPT_URL}" target="_blank" rel="noopener">See the full faculty list</a>.</figcaption>
       </figure>
     </div>
@@ -232,7 +234,9 @@ def build_seminars(seminars, faculty):
             internal = '<span class="internal">Internal speaker</span>' if t.get("internal") else ""
             meta = []
             if t.get("room"): meta.append(f"Room: {esc(t['room'])}")
-            if t.get("host"): meta.append(f"Host: {esc(t['host'])}")
+            if t.get("host"):
+                hp = fac_by_name.get(t["host"])
+                meta.append("Host: " + link(t["host"], hp.get("website") if hp else None))
             host = f'<div class="host">{" · ".join(meta)}</div>' if meta else ""
             title = f'<div class="ttl">“{esc(t["title"])}”</div>' if t.get("title") else ""
             items.append(f"""

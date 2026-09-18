@@ -29,7 +29,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:ieerg-seminar-2026-09-17@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20260917T140000
 DTEND;TZID=Europe/Madrid:20260917T150000
 SUMMARY:IEERG Seminar: Rita Ginja (University of Bergen)
@@ -40,7 +40,7 @@ URL:https://sites.google.com/site/rcginja/
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2026-09-24@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20260924T140000
 DTEND;TZID=Europe/Madrid:20260924T150000
 SUMMARY:IEERG Seminar: Laia Navarro-Solà (Stockholm University)
@@ -52,7 +52,7 @@ URL:https://www.laianavarrosola.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2026-10-01@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20261001T140000
 DTEND;TZID=Europe/Madrid:20261001T150000
 SUMMARY:IEERG Seminar: Hyunjae (Jay) Kang (Kyoto University)
@@ -63,7 +63,7 @@ URL:https://www.hyunjaekang.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2026-10-15@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20261015T140000
 DTEND;TZID=Europe/Madrid:20261015T150000
 SUMMARY:IEERG Seminar: Martina Repetto (University of Melbourne)
@@ -74,7 +74,7 @@ URL:https://martinarepetto.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2026-10-22@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20261022T140000
 DTEND;TZID=Europe/Madrid:20261022T150000
 SUMMARY:IEERG Seminar: Javier Soria Espín (Paris School of Economics and 
@@ -86,7 +86,7 @@ URL:https://sites.google.com/view/javier-soria-espin/home
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2026-10-29@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20261029T140000
 DTEND;TZID=Europe/Madrid:20261029T150000
 SUMMARY:IEERG Seminar: Ludovica Gazze (University of Warwick)
@@ -97,7 +97,7 @@ URL:https://sites.google.com/view/ludovicagazze
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2026-11-12@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20261112T140000
 DTEND;TZID=Europe/Madrid:20261112T150000
 SUMMARY:IEERG Seminar: Pedro Llanos-Paredes (University of Oxford)
@@ -108,7 +108,7 @@ URL:https://sites.google.com/view/pmllanos/
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2026-11-19@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20261119T140000
 DTEND;TZID=Europe/Madrid:20261119T150000
 SUMMARY:IEERG Seminar: Victoria Baranov (University of Melbourne)
@@ -120,7 +120,7 @@ URL:https://sites.google.com/site/victoriabaranov/home
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2026-11-26@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20261126T140000
 DTEND;TZID=Europe/Madrid:20261126T150000
 SUMMARY:IEERG Seminar: Christine Valente (University of Bristol)
@@ -131,7 +131,7 @@ URL:https://www.christinevalente.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2026-12-03@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20261203T140000
 DTEND;TZID=Europe/Madrid:20261203T150000
 SUMMARY:IEERG Seminar: Ainara González de San Román (IE University)
@@ -142,7 +142,7 @@ URL:https://sites.google.com/faculty.ie.edu/ainaragonzalezdesanroman
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2026-12-10@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20261210T140000
 DTEND;TZID=Europe/Madrid:20261210T150000
 SUMMARY:IEERG Seminar: María Hernández-de-Benito (CUNEF Universidad)
@@ -154,7 +154,7 @@ URL:https://sites.google.com/view/mariahernandezdebenito/home
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2027-03-04@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20270304T140000
 DTEND;TZID=Europe/Madrid:20270304T150000
 SUMMARY:IEERG Seminar: Siqi Wei (IE University)
@@ -165,7 +165,7 @@ URL:https://sites.google.com/cemfi.edu.es/siqiwei/
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2027-03-11@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20270311T140000
 DTEND;TZID=Europe/Madrid:20270311T150000
 SUMMARY:IEERG Seminar: Lorenzo Sileci (IE University)
@@ -176,7 +176,7 @@ URL:https://www.lorenzosileci.com
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2027-03-18@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20270318T140000
 DTEND;TZID=Europe/Madrid:20270318T150000
 SUMMARY:IEERG Seminar: Sasha Cheipesh (IE University)
@@ -187,7 +187,7 @@ URL:https://oleksandracheipesh.github.io/ocheipesh.github.io/
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2027-04-01@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20270401T140000
 DTEND;TZID=Europe/Madrid:20270401T150000
 SUMMARY:IEERG Seminar: Søren Leth-Petersen (University of Copenhagen)
@@ -198,7 +198,7 @@ URL:https://sites.google.com/view/sorenleth
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2027-04-15@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20270415T140000
 DTEND;TZID=Europe/Madrid:20270415T150000
 SUMMARY:IEERG Seminar: Lídia Farré (University of Barcelona)
@@ -210,7 +210,7 @@ URL:https://sites.google.com/site/lidiafarre78/home
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2027-04-22@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20270422T140000
 DTEND;TZID=Europe/Madrid:20270422T150000
 SUMMARY:IEERG Seminar: Charles Palmer (London School of Economics)
@@ -221,7 +221,7 @@ URL:https://personal.lse.ac.uk/palmerc2/
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2027-04-29@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20270429T140000
 DTEND;TZID=Europe/Madrid:20270429T150000
 SUMMARY:IEERG Seminar: Timo Boppart (University of Zurich)
@@ -233,7 +233,7 @@ URL:https://www.econ.uzh.ch/en/people/faculty/boppart.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2027-05-06@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20270506T140000
 DTEND;TZID=Europe/Madrid:20270506T150000
 SUMMARY:IEERG Seminar: César Garro-Marín (University of Edinburgh)
@@ -244,7 +244,7 @@ URL:https://www.cesargarromarin.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2027-05-13@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20270513T140000
 DTEND;TZID=Europe/Madrid:20270513T150000
 SUMMARY:IEERG Seminar: Christina Gathmann (LISER)
@@ -255,7 +255,7 @@ URL:https://sites.google.com/view/christina-gathmann/start
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2027-05-27@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20270527T140000
 DTEND;TZID=Europe/Madrid:20270527T150000
 SUMMARY:IEERG Seminar: Jonas Hjort (University College London)
@@ -266,7 +266,7 @@ URL:https://sites.google.com/site/jonashjort/
 END:VEVENT
 BEGIN:VEVENT
 UID:ieerg-seminar-2027-10-07@ieerg.github.io
-DTSTAMP:20260918T172859Z
+DTSTAMP:20260918T173358Z
 DTSTART;TZID=Europe/Madrid:20271007T140000
 DTEND;TZID=Europe/Madrid:20271007T150000
 SUMMARY:IEERG Seminar: Warn N. Lekfuangfu (Universidad Carlos III de Madri

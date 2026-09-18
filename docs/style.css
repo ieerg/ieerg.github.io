@@ -178,3 +178,9 @@ ul.toc a:hover { text-decoration: underline; }
 .faculty-link a:hover { background: var(--navy); color: #fff; }
 a.ieerg { color: var(--navy); font-weight: 600; text-decoration: none; }
 a.ieerg:hover { text-decoration: underline; }
+
+/* Home: linked faculty portraits */
+.montage { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; padding: 12px; border: 1px solid var(--line); background: #fff; }
+.montage a { display: block; }
+.montage img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%; display: block; transition: transform .15s; }
+.montage a:hover img { transform: scale(1.06); }
