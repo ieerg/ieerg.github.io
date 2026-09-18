@@ -30,6 +30,7 @@ SCHOOL_URL = "https://www.ie.edu/school-politics-economics-global-affairs/"
 DEPT_URL = ("https://www.ie.edu/school-politics-economics-global-affairs/faculty/"
             "?FACULTY_CATEGORY=17173&ACADEMIC_AREA=17166&page=1")
 IE_RESEARCH_URL = "https://www.ie.edu/research/"
+ECON_URL = "https://www.ie.edu/economics/"
 
 NAV = [
     ("index.html", "Home"),
@@ -74,7 +75,7 @@ def page(title, active, body, description=""):
 </main>
 <footer>
   <div class="wrap">
-    <span>© {year} IE Economics Research Group · <a href="{DEPT_URL}" target="_blank" rel="noopener">Department of Economics</a>, <a href="{SCHOOL_URL}" target="_blank" rel="noopener">IE University</a></span>
+    <span>© {year} IE Economics Research Group · <a href="{ECON_URL}" target="_blank" rel="noopener">Department of Economics</a>, <a href="{SCHOOL_URL}" target="_blank" rel="noopener">IE University</a></span>
     <span><a href="{IE_RESEARCH_URL}" target="_blank" rel="noopener">Research at IE University</a> · Madrid, Spain</span>
   </div>
 </footer>
@@ -140,7 +141,7 @@ def build_home(faculty, seminars, home):
     <div class="home-grid">
       <div>
         <p class="lead">The IE Economics Research Group (IEERG) brings together the research faculty of the
-        <a href="{DEPT_URL}" target="_blank" rel="noopener">Department of Economics</a> at
+        <a href="{ECON_URL}" target="_blank" rel="noopener">Department of Economics</a> at
         <a href="{SCHOOL_URL}" target="_blank" rel="noopener">IE University's School of Politics, Economics and Global Affairs (SPEGA)</a>
         in Madrid.</p>
         <p>{esc(home['intro'])}</p>
