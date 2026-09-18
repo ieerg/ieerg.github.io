@@ -8,14 +8,13 @@ Department of Economics at IE University (SPEGA).
 | Path | What it is |
 |---|---|
 | `docs/` | The finished web site. Upload the **contents** of this folder to any web host (GitHub Pages, IE web space, Netlify, etc.). Open `docs/index.html` locally to preview. |
-| `docs/img/` | Faculty photos (400x400), the group montage on the home page, and the IE logo. |
-| `data/faculty.json` | One entry per research faculty member: name, title, fields, links, bio. Order here is the order on the page. |
+| `docs/img/` | The faculty montage shown on the home page. Individual photos are kept in `data/photos/` (not published). |
+| `data/faculty.json` | One entry per research faculty member (name, links, author-name variants). No faculty page is built any more (the home page links to IE's faculty list instead), but the file still drives the bolding of IEERG names and the internal-speaker links. |
 | `data/seminars.json` | Seminar logistics and the talks by academic year (date, speaker, affiliation, speaker web page, host, `internal: true` for internal speakers). Add a new `years` block for each academic year; older years stay as the archive. |
 | `data/publications.json` | Journal articles, one object each (authors, year, title, journal, volume/pages, url). Use `"year": "forthcoming"` for accepted papers. |
 | `data/home.json` | Home page text: intro, mailing-list line, organizers, visitor-access instructions. |
 | `data/working_papers.json` | Working papers for the "Working papers" tab: faculty, coauthors, title, series, status, url, one-line summary, `topic` and `order` (display order within the page). To add a paper, copy an entry and give it the topic name exactly as spelled in the others. |
-| `data/hiring.json` | "We are hiring" page: intro, list of open positions (title, text, deadline, url), placeholder text when there are none. |
-| `build.py` | Generates the six HTML pages in `docs/` from the JSON files, plus `docs/seminars.ics`, the calendar feed people subscribe to (rebuilt from `seminars.json` on every build, so calendars update by themselves). |
+| `build.py` | Generates the four HTML pages (home, seminars, publications, working papers) in `docs/` from the JSON files, plus `docs/seminars.ics`, the calendar feed people subscribe to (rebuilt from `seminars.json` on every build, so calendars update by themselves). |
 | `merge_research.py` | One-off helper used to create the first `faculty.json` / `publications.json` from the web research in `data/research/`. Not needed again. |
 
 ## Where it is published
@@ -31,6 +30,6 @@ Repository: https://github.com/ieerg/ieerg.github.io (GitHub Pages serves the `d
 
 The PowerPoint, Excel and Word source documents in this folder are deliberately excluded from the repository (see `.gitignore`).
 
-To add a faculty member: add a 400x400 JPEG named `<slug>.jpg` to `docs/img/` (slug = lower-case name, accents removed, hyphens for spaces), add the entry to `data/faculty.json`, add their papers to `data/publications.json`, and optionally regenerate `faculty-montage.jpg`.
+To add a faculty member: add the entry to `data/faculty.json` (with `author_forms`), add their papers to `data/publications.json` / `data/working_papers.json`, and optionally regenerate `faculty-montage.jpg` from `data/photos/`.
 
 The author-name variants listed under `author_forms` in `faculty.json` are what the publications page uses to print IEERG members in bold.

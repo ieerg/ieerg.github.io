@@ -28,16 +28,14 @@ def link(text, url, cls=None, new_tab=True):
 
 SCHOOL_URL = "https://www.ie.edu/school-politics-economics-global-affairs/"
 DEPT_URL = ("https://www.ie.edu/school-politics-economics-global-affairs/faculty/"
-            "?FACULTY_CATEGORY=17173&ACADEMIC_AREA=29470&page=1")
+            "?FACULTY_CATEGORY=17173&ACADEMIC_AREA=17166&page=1")
 IE_RESEARCH_URL = "https://www.ie.edu/research/"
 
 NAV = [
     ("index.html", "Home"),
-    ("faculty.html", "Faculty"),
     ("seminars.html", "Seminar series"),
     ("publications.html", "Publications"),
     ("working-papers.html", "Working papers"),
-    ("hiring.html", "We are hiring"),
 ]
 
 def page(title, active, body, description=""):
@@ -62,7 +60,6 @@ def page(title, active, body, description=""):
   <div class="wrap">
     <div class="topbar">
       <a class="brand" href="index.html">
-        <img src="img/ie-logo.jpg" alt="IE University, School of Politics, Economics and Global Affairs">
         <span class="name">IE Economics Research Group<small>Department of Economics · IEERG</small></span>
       </a>
       <div class="school-link"><a href="{SCHOOL_URL}" target="_blank" rel="noopener">IE School of Politics, Economics and Global Affairs</a></div>
@@ -139,6 +136,7 @@ def build_home(faculty, seminars, home):
     body = f"""
     <h1 class="page-title">IE Economics Research Group</h1>
     <hr>
+    <p class="faculty-link"><a href="{DEPT_URL}" target="_blank" rel="noopener">Faculty of the Department of Economics &rarr;</a></p>
     <div class="home-grid">
       <div>
         <p class="lead">The IE Economics Research Group (IEERG) brings together the research faculty of the
@@ -156,8 +154,8 @@ def build_home(faculty, seminars, home):
         <p class="note">To learn more about research across IE University, visit <a href="{IE_RESEARCH_URL}" target="_blank" rel="noopener">IE Research</a>.</p>
       </div>
       <figure>
-        <a href="faculty.html"><img src="img/faculty-montage.jpg" alt="Research faculty of the IE Economics Research Group"></a>
-        <figcaption>Research faculty of the Department of Economics. <a href="faculty.html">Meet the group</a>.</figcaption>
+        <a href="{DEPT_URL}" target="_blank" rel="noopener"><img src="img/faculty-montage.jpg" alt="Research faculty of the IE Economics Research Group"></a>
+        <figcaption>Research faculty of the Department of Economics. <a href="{DEPT_URL}" target="_blank" rel="noopener">See the full faculty list</a>.</figcaption>
       </figure>
     </div>
 """
@@ -481,12 +479,9 @@ def main():
     seminars = load("seminars.json")
     pubs = load("publications.json")
     home = load("home.json")
-    hiring = load("hiring.json")
     write("index.html", build_home(faculty, seminars, home))
-    write("faculty.html", build_faculty(faculty))
     write("seminars.html", build_seminars(seminars, faculty))
     write("publications.html", build_publications(pubs, faculty))
-    write("hiring.html", build_hiring(hiring))
     write("working-papers.html", build_working_papers(load("working_papers.json"), faculty))
     build_ics(seminars, faculty)
 
