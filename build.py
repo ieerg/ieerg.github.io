@@ -306,7 +306,7 @@ def build_ics(seminars, faculty):
                 fp = fac_by_name.get(t["speaker"]); url = fp.get("website") if fp else None
             summary = f"IEERG Seminar: {t['speaker']} ({t['affiliation']})"
             desc = []
-            if t.get("title"): desc.append(f"\u201c{t['title']}\u201d")
+            if t.get("title"): desc.append(f"Title: {t['title']}")
             if t.get("host"): desc.append(f"Host: {t['host']}")
             if url: desc.append(f"Speaker: {url}")
             desc.append(f"Programme: {SITE_URL}seminars.html")
