@@ -39,7 +39,9 @@ NAV = [
     ("working-papers.html", "Working papers"),
 ]
 
-CSS_VERSION = datetime.datetime.now().strftime("%Y%m%d%H%M")
+import hashlib
+with open(os.path.join(SITE, "style.css"), "rb") as _f:
+    CSS_VERSION = hashlib.md5(_f.read()).hexdigest()[:8]   # changes only when the stylesheet changes
 
 def page(title, active, body, description=""):
     nav = "".join(

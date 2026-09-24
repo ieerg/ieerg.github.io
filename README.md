@@ -28,6 +28,8 @@ Repository: https://github.com/ieerg/ieerg.github.io (GitHub Pages serves the `d
 2. Run `python build.py` from this folder.
 3. Publish: `git add -A`, `git commit -m "describe the change"`, `git push`. The live site updates within about a minute.
 
+A GitHub Actions job (`.github/workflows/rebuild.yml`) rebuilds the site every day at 15:10 Madrid time and pushes only if the home page changed, so the "Next seminar" box moves on by itself after each talk. Before pulling changes made on your machine, run `git pull` first so you pick up those automatic commits.
+
 The PowerPoint, Excel and Word source documents in this folder are deliberately excluded from the repository (see `.gitignore`).
 
 To add a faculty member: add the entry to `data/faculty.json` (with `author_forms`), add their papers to `data/publications.json` / `data/working_papers.json`, and optionally regenerate `faculty-montage.jpg` from `data/photos/`.
