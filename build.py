@@ -43,19 +43,57 @@ import hashlib
 with open(os.path.join(SITE, "style.css"), "rb") as _f:
     CSS_VERSION = hashlib.md5(_f.read()).hexdigest()[:8]   # changes only when the stylesheet changes
 
-def page(title, active, body, description=""):
+SITE_URL = "https://ieerg.github.io/"
+
+# Search-engine titles and descriptions, one per page. Titles lead with the
+# words people actually search for (economics, IE University, Madrid).
+SEO = {
+    "index.html": (
+        "IE Economics Research Group | Department of Economics, IE University, Madrid",
+        "Research group and seminar series of the Department of Economics at IE University "
+        "(IE School of Politics, Economics and Global Affairs), Madrid. Faculty, weekly economics "
+        "seminars, publications and working papers."),
+    "seminars.html": (
+        "Economics Seminar Series | IE University Department of Economics, Madrid",
+        "Weekly Economics Research Seminar Series at IE University, Madrid: programme of invited "
+        "speakers, dates, rooms and calendar subscription. Open to researchers and students."),
+    "publications.html": (
+        "Publications | IE University Economics Faculty",
+        "Peer-reviewed journal articles by the economics faculty of IE University, Madrid, "
+        "listed by year: Econometrica, Journal of Finance, Journal of Public Economics and more."),
+    "working-papers.html": (
+        "Working Papers | Current Research, IE University Economics",
+        "Current working papers of the IE University Department of Economics by topic: monetary "
+        "policy and macro-finance, climate economics, fertility, ageing and health, education, development."),
+}
+
+def page(title, active, body, description="", extra_head=""):
     nav = "".join(
         f'<li><a href="{href}"{" class=\"active\"" if href == active else ""}>{esc(label)}</a></li>'
         for href, label in NAV
     )
     year = datetime.date.today().year
+    seo_title, seo_desc = SEO.get(active, (f"{title} | IEERG", ""))
+    description = description or seo_desc
+    canonical = SITE_URL if active == "index.html" else SITE_URL + active
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(title)} | IEERG</title>
-<meta name="description" content="{esc(description or 'IE Economics Research Group (IEERG), Department of Economics, IE University School of Politics, Economics and Global Affairs, Madrid.')}">
+<title>{esc(seo_title)}</title>
+<meta name="description" content="{esc(description)}">
+<meta name="keywords" content="economics, IE University, Department of Economics, economics department IE, IE SPEGA, economics seminar Madrid, economics research Madrid, IEERG">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{canonical}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IE Economics Research Group">
+<meta property="og:title" content="{esc(seo_title)}">
+<meta property="og:description" content="{esc(description)}">
+<meta property="og:url" content="{canonical}">
+<meta property="og:image" content="{SITE_URL}img/faculty-montage.jpg">
+<meta name="twitter:card" content="summary">
+{extra_head}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v={CSS_VERSION}">
@@ -91,6 +129,83 @@ def write(name, content):
     with open(os.path.join(SITE, name), "w", encoding="utf-8") as f:
         f.write(content)
     print("wrote", name)
+
+# ---------- structured data for search engines (schema.org JSON-LD) ----------
+def _jsonld(obj):
+    return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False) + "</script>"
+
+def jsonld_org(faculty, seminars):
+    members = [{"@type": "Person", "name": p["name"], "url": p.get("website"),
+                "jobTitle": p.get("title"), "affiliation": "IE University"} for p in faculty]
+    org = {
+        "@context": "https://schema.org",
+        "@type": "ResearchOrganization",
+        "name": "IE Economics Research Group (IEERG)",
+        "alternateName": ["IEERG", "Department of Economics, IE University", "IE University Economics Department"],
+        "url": SITE_URL,
+        "description": SEO["index.html"][1],
+        "parentOrganization": {
+            "@type": "CollegeOrUniversity",
+            "name": "IE University",
+            "department": {"@type": "Organization", "name": "IE School of Politics, Economics and Global Affairs", "url": SCHOOL_URL},
+            "url": "https://www.ie.edu/",
+        },
+        "address": {"@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES"},
+        "member": members,
+        "knowsAbout": ["Economics", "Monetary economics", "Labor economics", "Health economics",
+                       "Development economics", "Environmental economics", "Econometrics"],
+    }
+    return _jsonld(org)
+
+def jsonld_events(seminars, faculty):
+    lg = seminars["logistics"]
+    t0, t1 = [x.strip() for x in lg["time"].replace("–", "-").split("-")]
+    events = []
+    for y in seminars["years"]:
+        for t in y["talks"]:
+            if not t.get("speaker"): continue
+            name = f"Economics seminar: {t['speaker']} ({t['affiliation']})"
+            if t.get("title"): name += f" — {t['title']}"
+            ev = {
+                "@type": "EducationEvent",
+                "name": name,
+                "startDate": f"{t['date']}T{t0}:00+01:00" if datetime.date.fromisoformat(t['date']).month in (11,12,1,2,3) else f"{t['date']}T{t0}:00+02:00",
+                "endDate": f"{t['date']}T{t1}:00+01:00" if datetime.date.fromisoformat(t['date']).month in (11,12,1,2,3) else f"{t['date']}T{t1}:00+02:00",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "location": {"@type": "Place", "name": t.get("room") or lg["venue"],
+                             "address": {"@type": "PostalAddress", "streetAddress": "Calle María de Molina 11-13-15",
+                                         "addressLocality": "Madrid", "postalCode": "28006", "addressCountry": "ES"}},
+                "performer": {"@type": "Person", "name": t["speaker"], "url": t.get("url"),
+                              "affiliation": t["affiliation"]},
+                "organizer": {"@type": "Organization", "name": "IE Economics Research Group (IEERG)", "url": SITE_URL},
+                "isAccessibleForFree": True,
+                "url": SITE_URL + "seminars.html",
+            }
+            events.append(ev)
+    series = {
+        "@context": "https://schema.org",
+        "@type": "EventSeries",
+        "name": "IE Economics Research Group Seminar Series",
+        "description": SEO["seminars.html"][1],
+        "url": SITE_URL + "seminars.html",
+        "organizer": {"@type": "Organization", "name": "IE Economics Research Group (IEERG)", "url": SITE_URL},
+        "location": {"@type": "Place", "name": lg["venue"], "address": {"@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES"}},
+        "subEvent": events,
+    }
+    return _jsonld(series)
+
+def write_sitemap_and_robots():
+    today = datetime.date.today().isoformat()
+    urls = [SITE_URL] + [SITE_URL + href for href, _ in NAV if href != "index.html"]
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for u in urls:
+        pri = "1.0" if u == SITE_URL else "0.8"
+        sm.append(f"  <url><loc>{u}</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>{pri}</priority></url>")
+    sm.append("</urlset>")
+    write("sitemap.xml", "\n".join(sm) + "\n")
+    write("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}sitemap.xml\n")
 
 # ---------- helpers for dates ----------
 def fmt_date(iso):
@@ -166,7 +281,7 @@ def build_home(faculty, seminars, home):
       </figure>
     </div>
 """
-    return page("Home", "index.html", body)
+    return page("Home", "index.html", body, extra_head=jsonld_org(faculty, seminars))
 
 def build_faculty(faculty):
     cards = []
@@ -266,7 +381,7 @@ def build_seminars(seminars, faculty):
     {''.join(sections)}
     <p class="note" style="margin-top:22px">Dates may change; the page is updated as the programme is confirmed.</p>
 """
-    return page("Seminar series", "seminars.html", body)
+    return page("Seminar series", "seminars.html", body, extra_head=jsonld_events(seminars, faculty))
 
 SITE_URL = "https://ieerg.github.io/"
 ICS_NAME = "seminars.ics"
@@ -506,6 +621,7 @@ def main():
     write("publications.html", build_publications(pubs, faculty))
     write("working-papers.html", build_working_papers(load("working_papers.json"), faculty))
     build_ics(seminars, faculty)
+    write_sitemap_and_robots()
 
 if __name__ == "__main__":
     main()
