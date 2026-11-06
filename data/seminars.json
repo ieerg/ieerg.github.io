@@ -94,6 +94,14 @@
           "host": "Mattia Fracchia"
         },
         {
+          "date": "2027-02-25",
+          "speaker": "Sasha Cheipesh",
+          "affiliation": "IE University",
+          "url": null,
+          "host": null,
+          "internal": true
+        },
+        {
           "date": "2027-03-04",
           "speaker": "Siqi Wei",
           "affiliation": "IE University",
@@ -111,11 +119,10 @@
         },
         {
           "date": "2027-03-18",
-          "speaker": "Sasha Cheipesh",
-          "affiliation": "IE University",
-          "url": null,
-          "host": null,
-          "internal": true
+          "speaker": "Félix Muñoz-García",
+          "affiliation": "Washington State University",
+          "url": "https://felixmunozgarcia.com/",
+          "host": null
         },
         {
           "date": "2027-04-01",
