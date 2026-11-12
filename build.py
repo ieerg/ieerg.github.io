@@ -46,6 +46,10 @@ with open(os.path.join(SITE, "style.css"), "rb") as _f:
 
 SITE_URL = "https://ieerg.github.io/"
 
+# Hosts stay recorded in data/seminars.json but are not shown on the seminar
+# page or in the calendar feed. Set to True to display them again.
+SHOW_HOSTS = False
+
 # Search-engine titles and descriptions, one per page. Titles lead with the
 # words people actually search for (economics, IE University, Madrid).
 SEO = {
@@ -358,7 +362,7 @@ def build_seminars(seminars, faculty):
             internal = '<span class="internal">Internal speaker</span>' if t.get("internal") else ""
             meta = []
             if t.get("room"): meta.append(f"Room: {esc(t['room'])}")
-            if t.get("host"):
+            if SHOW_HOSTS and t.get("host"):
                 hp = fac_by_name.get(t["host"])
                 meta.append("Host: " + link(t["host"], hp.get("website") if hp else None))
             host = f'<div class="host">{" · ".join(meta)}</div>' if meta else ""
@@ -435,7 +439,7 @@ def build_ics(seminars, faculty):
             summary = f"IEERG Seminar: {t['speaker']} ({t['affiliation']})"
             desc = []
             if t.get("title"): desc.append(f"Title: {t['title']}")
-            if t.get("host"): desc.append(f"Host: {t['host']}")
+            if SHOW_HOSTS and t.get("host"): desc.append(f"Host: {t['host']}")
             if url: desc.append(f"Speaker: {url}")
             desc.append(f"Programme: {SITE_URL}seminars.html")
             location = t.get("room") or f"{lg['venue']} ({lg['room']})"
