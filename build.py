@@ -34,6 +34,7 @@ ECON_URL = "https://www.ie.edu/economics/"
 
 NAV = [
     ("index.html", "Home"),
+    ("faculty.html", "Faculty"),
     ("seminars.html", "Seminar series"),
     ("publications.html", "Publications"),
     ("working-papers.html", "Working papers"),
@@ -53,6 +54,10 @@ SEO = {
         "Research group and seminar series of the Department of Economics at IE University "
         "(IE School of Politics, Economics and Global Affairs), Madrid. Faculty, weekly economics "
         "seminars, publications and working papers."),
+    "faculty.html": (
+        "Faculty | Department of Economics, IE University, Madrid",
+        "Research faculty of the Department of Economics at IE University, Madrid: profiles, research "
+        "fields, biographies and links to personal web pages and Google Scholar."),
     "seminars.html": (
         "Economics Seminar Series | IE University Department of Economics, Madrid",
         "Weekly Economics Research Seminar Series at IE University, Madrid: programme of invited "
@@ -617,6 +622,7 @@ def main():
     pubs = load("publications.json")
     home = load("home.json")
     write("index.html", build_home(faculty, seminars, home))
+    write("faculty.html", build_faculty(faculty))
     write("seminars.html", build_seminars(seminars, faculty))
     write("publications.html", build_publications(pubs, faculty))
     write("working-papers.html", build_working_papers(load("working_papers.json"), faculty))

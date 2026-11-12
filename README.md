@@ -9,12 +9,12 @@ Department of Economics at IE University (SPEGA).
 |---|---|
 | `docs/` | The finished web site. Upload the **contents** of this folder to any web host (GitHub Pages, IE web space, Netlify, etc.). Open `docs/index.html` locally to preview. |
 | `docs/img/` | The faculty montage shown on the home page. The eleven portraits shown as a linked grid on the home page (`<slug>.jpg`, 400x400). |
-| `data/faculty.json` | One entry per research faculty member (name, links, author-name variants). No faculty page is built any more (the home page links to IE's faculty list instead), but the file still drives the bolding of IEERG names and the internal-speaker links. |
+| `data/faculty.json` | One entry per research faculty member (name, links, author-name variants). Feeds the Faculty page (photo grid and biographies) and also drives the bolding of IEERG names and the internal-speaker links. |
 | `data/seminars.json` | Seminar logistics and the talks by academic year (date, speaker, affiliation, speaker web page, host, `internal: true` for internal speakers). Add a new `years` block for each academic year; older years stay as the archive. |
 | `data/publications.json` | Journal articles, one object each (authors, year, title, journal, volume/pages, url). Use `"year": "forthcoming"` for accepted papers. |
 | `data/home.json` | Home page text: intro, mailing-list line, organizers, visitor-access instructions. |
 | `data/working_papers.json` | Working papers for the "Working papers" tab: faculty, coauthors, title, series, status, url, one-line summary, `topic` and `order` (display order within the page). To add a paper, copy an entry and give it the topic name exactly as spelled in the others. |
-| `build.py` | Generates the four HTML pages (home, seminars, publications, working papers) in `docs/` from the JSON files, plus `docs/seminars.ics`, the calendar feed people subscribe to (rebuilt from `seminars.json` on every build, so calendars update by themselves). |
+| `build.py` | Generates the five HTML pages (home, faculty, seminars, publications, working papers) in `docs/` from the JSON files, plus `docs/seminars.ics`, the calendar feed people subscribe to (rebuilt from `seminars.json` on every build, so calendars update by themselves). |
 | `merge_research.py` | One-off helper used to create the first `faculty.json` / `publications.json` from the web research in `data/research/`. Not needed again. |
 
 ## Where it is published
